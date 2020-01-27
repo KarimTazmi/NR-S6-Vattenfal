@@ -1,0 +1,188 @@
+@import url("fonts.css");
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+:root {
+  --white-color: #ffffff;
+  --yellow-color: #ffda00;
+  --grey-color: #4e4b48;
+  --black-color: #000000;
+  --blue-color: #2071b5;
+  --blue-color-dark: #005c63;
+  --pink-color: #d1266b;
+  --green-color: #3dc07c;
+  --red-color: #f93b18;
+  --purple-color: #9b62c3;
+  --purple-color-dark: #85254b;
+  font-family: "Graphik", sans-serif;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern";
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  margin: 0 1rem;
+  padding: 0;
+  color: var(--black-color);
+}
+
+a {
+  color: var(--black-color);
+  text-decoration: none;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.55rem;
+  line-height: 1.5;
+}
+
+/* Section styling*/
+section {
+  margin-bottom: 1rem;
+}
+
+/* Navigation */
+.nav__main {
+  display: grid;
+  grid-template-columns: 1fr 7fr 1fr;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 1rem;
+  width: 85%;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+.nav__main img {
+  height: 30px;
+}
+
+.nav__main-items {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.nav__main i {
+  padding-top: 0.3rem;
+}
+
+/* Section 1: Video landing */
+.landing {
+  color: var(--white-color);
+  text-align: center;
+  margin: 0 auto 7rem auto;
+}
+
+.landing__video-wrapper {
+  height: 80vh;
+  position: relative;
+  overflow-y: hidden;
+  padding-top: 4rem;
+}
+
+/* Landing video section*/
+.landing video {
+  position: absolute;
+  min-height: 100%;
+  min-width: 100%;
+  top: -200px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -100;
+  object-fit: cover;
+}
+
+.heading__large {
+  font-size: 72px;
+  line-height: 1.2;
+}
+
+.landing__link {
+  font-size: 20px;
+  color: var(--white-color);
+}
+
+.landing__link::before {
+  content: ">";
+  margin-right: 0.5rem;
+  color: var(--white-color);
+}
+
+.landing__logo {
+  height: 250px;
+  width: 250px;
+  margin: 0 auto;
+}
+
+/* Section 2: Introduction */
+.intro {
+  width: 50%;
+  margin: 0 auto 7rem auto;
+  text-align: center;
+}
+
+.intro p {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.intro__link {
+  padding: 9px 48px;
+  font-size: 14px;
+  line-height: 18px;
+  border-radius: 20px;
+  border: 2px var(--black-color) solid;
+}
+
+.intro__link:hover {
+  color: var(--white-color);
+  background-color: var(--black-color);
+  border: 2px var(--black-color) solid;
+}
+
+/* Section 3: Fossil Freedom */
+.three__column-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 4fr;
+  grid-gap: 2rem;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.heading__medium {
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 72px;
+  letter-spacing: -0.2px;
+}
+
+.three__column-grid h2 {
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 3;
+  margin: 2rem auto;
+}
