@@ -14,11 +14,13 @@ html {
   --white-color: #ffffff;
   --yellow-color: #ffda00;
   --grey-color: #4e4b48;
+  --grey-color-light: #edf1f6;
   --black-color: #000000;
   --blue-color: #2071b5;
   --blue-color-dark: #005c63;
   --pink-color: #d1266b;
   --green-color: #3dc07c;
+  --green-color-light: #edf9f3;
   --red-color: #f93b18;
   --purple-color: #9b62c3;
   --purple-color-dark: #85254b;
@@ -39,9 +41,27 @@ body {
   color: var(--black-color);
 }
 
+/* Anchors */
 a {
   color: var(--black-color);
   text-decoration: none;
+}
+
+.link__text {
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.link__text::before {
+  content: ">";
+  margin-right: 0.5rem;
+  color: var(--blue-color);
+}
+
+p {
+  font-size: 20px;
+  line-height: 1.6;
 }
 
 /* Headings */
@@ -53,6 +73,36 @@ h5,
 h6 {
   margin-bottom: 0.55rem;
   line-height: 1.5;
+}
+
+.heading__large {
+  font-size: 72px;
+  line-height: 1.2;
+}
+
+.heading__medium {
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 1.5;
+  letter-spacing: -0.2px;
+}
+
+.heading__small {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.heading__tiny {
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: 36px;
+}
+
+.strapline {
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 /* Section styling*/
@@ -115,11 +165,6 @@ section {
   object-fit: cover;
 }
 
-.heading__large {
-  font-size: 72px;
-  line-height: 1.2;
-}
-
 .landing__link {
   font-size: 20px;
   color: var(--white-color);
@@ -165,24 +210,135 @@ section {
 }
 
 /* Section 3: Fossil Freedom */
-.three__column-grid {
+.three__column-grid-content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr 4fr;
   grid-gap: 2rem;
   margin: 0 auto;
-  width: 80%;
+  width: 80vw;
 }
 
-.heading__medium {
-  font-weight: 700;
-  font-size: 52px;
-  line-height: 72px;
-  letter-spacing: -0.2px;
-}
-
-.three__column-grid h2 {
-  grid-row: 1 / span 1;
+.three__column-grid-content h2 {
   grid-column: 1 / span 3;
   margin: 2rem auto;
+}
+
+.three__column-grid-content p {
+  font-size: 18px;
+}
+
+.content__card img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.half__background-grey {
+  background-color: var(--grey-color-light);
+  height: 35vh;
+  margin-top: -250px;
+}
+
+/* Section 4: Co2 Emissions */
+.double__column-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  width: 80vw;
+  margin: 0 auto;
+  padding-top: 4rem;
+}
+
+.double__column-grid-item img {
+  width: 100%;
+}
+
+/* Section 5: news */
+.news__grid {
+  text-align: center;
+}
+
+.news__grid .three__column-grid-content .content__card h3 {
+  margin-top: 0;
+}
+
+/* Section 6: Careers */
+.career {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 2rem;
+  width: 80vw;
+  margin: 0 auto;
+  padding: 4rem 0;
+  align-items: center;
+}
+
+.career__text {
+  grid-column: 1 / span 3;
+}
+
+.career__text .heading__medium {
+  margin-top: 0;
+}
+
+.career__img {
+  grid-column: 5 / span 2;
+}
+
+.career__img img {
+  border-radius: 50%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Section 7: See Also */
+.half__background-green {
+  background-color: var(--green-color-light);
+  height: 35vh;
+  margin-top: -250px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--grey-color-light);
+  margin: 0 auto;
+  padding: 4rem 8rem 4rem 8rem;
+}
+
+.footer__items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 2rem;
+}
+
+.footer__content p {
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.footer__content ul {
+  padding-left: 0;
+}
+
+.footer__content ul li {
+  margin-bottom: 1rem;
+}
+
+.footer__content ul li a {
+  color: var(--blue-color);
+}
+
+.footer__social {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  justify-items: left;
+}
+
+.footer__social li i {
+  width: 100px;
+}
+
+.footer__menu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
