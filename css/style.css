@@ -1,3 +1,4 @@
+/* Overall styling */
 @import url("fonts.css");
 
 html {
@@ -39,9 +40,10 @@ body {
   margin: 0 1rem;
   padding: 0;
   color: var(--black-color);
+  font-size: 18px;
 }
 
-/* Anchors */
+/* Anchor styling */
 a {
   color: var(--black-color);
   text-decoration: none;
@@ -59,12 +61,21 @@ a {
   color: var(--blue-color);
 }
 
-p {
-  font-size: 20px;
-  line-height: 1.6;
+.button__black {
+  padding: 9px 48px;
+  font-size: 14px;
+  line-height: 18px;
+  border-radius: 20px;
+  border: 2px var(--black-color) solid;
 }
 
-/* Headings */
+.button__black:hover {
+  color: var(--white-color);
+  background-color: var(--black-color);
+  border: 2px var(--black-color) solid;
+}
+
+/* Font styling */
 h1,
 h2,
 h3,
@@ -105,16 +116,76 @@ h6 {
   font-weight: 400;
 }
 
-/* Section styling*/
+p {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+/* Section styling */
 section {
   margin-bottom: 1rem;
 }
 
-/* Navigation */
+/* Column styling */
+.double__column-grid {
+  /* Double column layout */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  width: 80vw;
+  margin: 0 auto;
+  padding-top: 4rem;
+}
+
+.double__column-grid img {
+  width: 100%;
+}
+
+.three__column-grid {
+  /* Triple column layout */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  margin: 0 auto;
+  width: 80vw;
+}
+
+three__column-card {
+  /* Triple column content card */
+  width: 100%;
+  object-fit: cover;
+}
+
+.half__background {
+  /*  Half background for triple column layout */
+  height: 35vh;
+  margin-top: -250px;
+}
+
+.background__grey {
+  /*  Color for half background */
+  background-color: var(--grey-color-light);
+}
+
+.background__green {
+  /*  Color for half background */
+  background-color: var(--green-color-light);
+}
+
+.four__column-grid {
+  /* Triple column layout */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 4rem;
+  margin: 8rem auto;
+  width: 80vw;
+  justify-items: center;
+}
+
+/* Navigation styling */
 .nav__main {
   display: grid;
   grid-template-columns: 1fr 7fr 1fr;
-  font-size: 18px;
   font-weight: 500;
   padding: 1rem;
   width: 85%;
@@ -142,7 +213,7 @@ section {
 .landing {
   color: var(--white-color);
   text-align: center;
-  margin: 0 auto 7rem auto;
+  margin: 0 auto;
 }
 
 .landing__video-wrapper {
@@ -150,10 +221,12 @@ section {
   position: relative;
   overflow-y: hidden;
   padding-top: 4rem;
+  min-height: 100%;
+  min-width: 100%;
 }
 
-/* Landing video section*/
 .landing video {
+  /* Landing video section*/
   position: absolute;
   min-height: 100%;
   min-width: 100%;
@@ -176,6 +249,7 @@ section {
   color: var(--white-color);
 }
 
+/* Logo for landing */
 .landing__logo {
   height: 250px;
   width: 250px;
@@ -195,150 +269,91 @@ section {
   line-height: 1.5;
 }
 
-.intro__link {
-  padding: 9px 48px;
-  font-size: 14px;
-  line-height: 18px;
-  border-radius: 20px;
-  border: 2px var(--black-color) solid;
-}
-
-.intro__link:hover {
-  color: var(--white-color);
-  background-color: var(--black-color);
-  border: 2px var(--black-color) solid;
-}
-
 /* Section 3: Fossil Freedom */
-.three__column-grid-content {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2rem;
-  margin: 0 auto;
-  width: 80vw;
-}
-
-.three__column-grid-content h2 {
+#fossil__freedom h2 {
   grid-column: 1 / span 3;
   margin: 2rem auto;
 }
 
-.three__column-grid-content p {
+#fossil__freedom p {
   font-size: 18px;
 }
 
-.content__card img {
-  width: 100%;
-  object-fit: cover;
-}
-
-.half__background-grey {
-  background-color: var(--grey-color-light);
-  height: 35vh;
-  margin-top: -250px;
-}
-
-/* Section 4: Co2 Emissions */
-.double__column-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 2rem;
-  width: 80vw;
-  margin: 0 auto;
-  padding-top: 4rem;
-}
-
-.double__column-grid-item img {
-  width: 100%;
-}
-
-/* Section 5: news */
-.news__grid {
+/* Section 5: News */
+#news {
   text-align: center;
 }
 
-.news__grid .three__column-grid-content .content__card h3 {
-  margin-top: 0;
+#news h2 {
+  grid-column: 1 / span 3;
 }
 
 /* Section 6: Careers */
-.career {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-gap: 2rem;
-  width: 80vw;
-  margin: 0 auto;
-  padding: 4rem 0;
+#careers {
   align-items: center;
 }
 
 .career__text {
-  grid-column: 1 / span 3;
+  grid-column: 1 / span 2;
 }
 
-.career__text .heading__medium {
-  margin-top: 0;
+#careers .career__img {
+  grid-column: 3 / span 2;
 }
 
-.career__img {
-  grid-column: 5 / span 2;
-}
-
-.career__img img {
+#careers img {
+  height: 400px;
   border-radius: 50%;
-  width: 100%;
-  object-fit: cover;
 }
 
-/* Section 7: See Also */
-.half__background-green {
-  background-color: var(--green-color-light);
-  height: 35vh;
-  margin-top: -250px;
+/* Section 7: See also */
+#see__also h2 {
+  grid-column: 1 / span 3;
+  text-align: center;
 }
 
 /* Footer */
 footer {
-  background-color: var(--grey-color-light);
-  margin: 0 auto;
-  padding: 4rem 8rem 4rem 8rem;
+  background-color: var(--green-color-light);
+  margin-bottom: 0;
 }
 
-.footer__items {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+footer .four__column-grid {
   margin-bottom: 2rem;
 }
 
-.footer__content p {
-  font-size: 17px;
-  line-height: 1.6;
-}
-
-.footer__content ul {
-  padding-left: 0;
-}
-
-.footer__content ul li {
-  margin-bottom: 1rem;
-}
-
-.footer__content ul li a {
+footer a {
   color: var(--blue-color);
+}
+
+footer ul {
+  padding-inline-start: 0;
+}
+
+footer .four__column-grid {
+  padding-top: 4rem;
 }
 
 .footer__social {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1rem;
+  padding-inline-start: 0;
+}
+
+footer i {
+  color: var(--blue-color);
+  padding-right: 30px;
+  padding-bottom: 30px;
+}
+
+#footer__menu {
   justify-items: left;
+  margin: 1rem auto;
+  padding-top: 0;
+  padding-bottom: 2rem;
 }
 
-.footer__social li i {
-  width: 100px;
-}
-
-.footer__menu {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+#footer__menu a {
+  color: var(--black-color);
+  font-weight: 500;
 }
