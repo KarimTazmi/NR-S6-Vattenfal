@@ -150,7 +150,7 @@ section {
   width: 80vw;
 }
 
-three__column-card {
+.three__column-card img {
   /* Triple column content card */
   width: 100%;
   object-fit: cover;
@@ -254,6 +254,7 @@ three__column-card {
   height: 250px;
   width: 250px;
   margin: 0 auto;
+  margin-top: -135px;
 }
 
 /* Section 2: Introduction */
