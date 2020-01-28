@@ -31,6 +31,7 @@
   /* Triple column layout */
   grid-template-columns: 1fr;
   width: 95%;
+  margin: 2rem auto;
 }
 
 /* Navigation styling */

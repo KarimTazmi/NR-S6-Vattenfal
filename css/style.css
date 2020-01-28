@@ -117,7 +117,7 @@ h6 {
 }
 
 p {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.6;
 }
 
@@ -276,10 +276,6 @@ section {
   margin: 2rem auto;
 }
 
-#fossil__freedom p {
-  font-size: 18px;
-}
-
 /* Section 5: News */
 #news {
   text-align: center;
@@ -339,6 +335,7 @@ footer .four__column-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding-inline-start: 0;
+  justify-items: left;
 }
 
 footer i {
